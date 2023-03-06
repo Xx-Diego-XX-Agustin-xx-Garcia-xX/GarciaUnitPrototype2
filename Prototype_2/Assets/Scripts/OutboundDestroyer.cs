@@ -14,6 +14,7 @@ public class OutboundDestroyer : MonoBehaviour
         } 
         else if (transform.position.z < southBound)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
     }
