@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
+    public float verticalInput;
     public float speed;
     public float xRange;
+    public float zRange;
     public GameObject projectilePrefab;
     void Update()
     {
@@ -24,5 +26,7 @@ public class PlayerController : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
     }
 }
