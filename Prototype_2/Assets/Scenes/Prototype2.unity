@@ -154,8 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creationDelay: 2
   creationInterval: 4
-  createHorizontalZ: 0
-  createHorizontalX: 0
   enemyPrefabs:
   - {fileID: 982000664571881752, guid: 7a6741fe1100a5a43bafb3af8ad7a11f, type: 3}
   - {fileID: 1256062846197899596, guid: f4e1a00596e5c5547bd89a1defcd06b1, type: 3}
@@ -540,7 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   verticalInput: 0
-  speed: 25
+  speed: 12.5
   xRange: 25
   zRange: 25
   projectilePrefab: {fileID: 1536904730367254419, guid: d8902f3ca96fd26448d15919e43b793b, type: 3}

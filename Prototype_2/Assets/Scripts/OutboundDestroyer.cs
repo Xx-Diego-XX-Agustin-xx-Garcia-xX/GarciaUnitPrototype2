@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class OutboundDestroyer : MonoBehaviour
 {
-    private float northBound = 35;
-    private float southBound = -15;
+    private float verticalBound = 25;
+    private float horizontalBound = -25;
     void Update()
     {
-        if (transform.position.z > northBound)
+        if (transform.position.z > verticalBound)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         } 
-        else if (transform.position.z < southBound)
+        else if (transform.position.z < -verticalBound)
+        {
+            Debug.Log("Game Over!");
+            Destroy(gameObject);
+        }
+        else if (transform.position.x < horizontalBound)
+        {
+            Debug.Log("Game Over!");
+            Destroy(gameObject);
+        }
+        else if (transform.position.x < -horizontalBound)
         {
             Debug.Log("Game Over!");
             Destroy(gameObject);
