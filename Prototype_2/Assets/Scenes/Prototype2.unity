@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creationDelay: 2
   creationInterval: 4
+  createHorizontalZ: 0
+  createHorizontalX: 0
   enemyPrefabs:
   - {fileID: 982000664571881752, guid: 7a6741fe1100a5a43bafb3af8ad7a11f, type: 3}
   - {fileID: 1256062846197899596, guid: f4e1a00596e5c5547bd89a1defcd06b1, type: 3}
@@ -512,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 50, z: 7.5}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -540,7 +542,7 @@ MonoBehaviour:
   verticalInput: 0
   speed: 25
   xRange: 25
-  zRange: 2.5
+  zRange: 25
   projectilePrefab: {fileID: 1536904730367254419, guid: d8902f3ca96fd26448d15919e43b793b, type: 3}
 --- !u!1 &992285705
 GameObject:
@@ -566,7 +568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992285705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

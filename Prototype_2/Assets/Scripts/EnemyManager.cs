@@ -8,6 +8,8 @@ public class EnemyManager : MonoBehaviour
     private float enemyPosZ = 20;
     public float creationDelay;
     public float creationInterval;
+    public float createHorizontalZ;
+    public float createHorizontalX;
     public GameObject[] enemyPrefabs;
     void Start()
     {
@@ -18,5 +20,13 @@ public class EnemyManager : MonoBehaviour
         int enemyIndex = Random.Range(0, enemyPrefabs.Length);
         Vector3 enemyPos = new Vector3(Random.Range(-enemyRange, enemyRange), 0, enemyPosZ);
         Instantiate(enemyPrefabs[enemyIndex], enemyPos, enemyPrefabs[enemyIndex].transform.rotation);
+    }
+    void CreateRandomEnemyLeft()
+    {
+
+    }
+    void CreateRandomEnemyRight()
+    {
+
     }
 }
