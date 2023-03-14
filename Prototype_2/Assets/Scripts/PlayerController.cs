@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float xRange;
     public float zRange;
     public GameObject projectilePrefab;
+    public Transform projectileCreationPoint;
     void Update()
     {
         if (transform.position.x < -xRange)
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileCreationPoint.position, projectilePrefab.transform.rotation);
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);

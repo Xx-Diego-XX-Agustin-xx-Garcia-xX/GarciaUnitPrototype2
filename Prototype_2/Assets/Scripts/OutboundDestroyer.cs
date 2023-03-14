@@ -6,26 +6,31 @@ public class OutboundDestroyer : MonoBehaviour
 {
     private float verticalBound = 25;
     private float horizontalBound = -25;
+    private GameManager gameManager;
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     void Update()
     {
         if (transform.position.z > verticalBound)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         } 
         else if (transform.position.z < -verticalBound)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
         else if (transform.position.x < horizontalBound)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
-        else if (transform.position.x < -horizontalBound)
+        else if (transform.position.x > -horizontalBound)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
     }
